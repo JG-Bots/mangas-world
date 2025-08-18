@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mangás World</title>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet" async>
+    <link rel="stylesheet" href="body.css">
+</head>
+
+<body>
+    <header>
+        <div class="header" id="header">
+            <h1>Mangás <span>World</span></h1>
+            <div class="hamburger-btn" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <a href="/">Início</a>
+        <a href="/sobre">Sobre</a>
+        <a href="/contato">Contato</a>
+    </nav>
+
+    <div class="main">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Bem-vindo ao Mangás <span>World</span></h1>
+                <h3>Explore os melhores mangás aqui na nossa plataforma!</h3>
+            </div>
+        </section>
+
+        <section class="mangas-main">
+            <div class="title-container">
+                <h1>Top Mangás</h1>
+            </div>
+
+            <div class="carrosel-container">
+                <div class="carrosel" id="carrosel">
+                    <div class="carrosel-item" style="background-image: url(https://images8.alphacoders.com/950/thumb-1920-950031.jpg);">
+                        <div class="carrosel-content">
+                            <h2>One Punch</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="up" id="pgup" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">&#8679;</div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("sidebar").classList.toggle("active");
+            document.querySelector(".hamburger-btn").classList.toggle("active");
+        }
+
+        window.addEventListener("scroll", function () {
+            const header = document.getElementById("header");
+            const up = document.getElementById("pgup");
+            if (window.scrollY > 50) {
+                header.classList.add("scrolled");
+                up.classList.add("upscrole");
+            } else {
+                header.classList.remove("scrolled");
+                up.classList.remove("upscrole");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Teko, sans-serif;
+    background-color: #222;
+    color: #fff;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease;
+}
+
+span {
+    color: #c0392b;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.header {
+    background: #1d1d1d;
+    width: 100%;
+    height: 80px;
+    padding: 0.4em 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header.scrolled {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    height: 70vh;
+    background: #333;
+    color: #fff;
+    padding-left: 1em;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #fff;
+}
+
+.hero h3 {
+    color: #cff;
+    font-weight: bold;
+}
+
+.carrosel-container {
+    width: 100%;
+    margin: 30px auto;
+    position: relative;
+}
+
+.carrosel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    transition: transform 0.5s ease;
+}
+
+.carrosel-item {
+    flex: 1 1 calc(33.33% - 10px);
+    height: 15em;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.carrosel-item:hover {
+    transform: scale(1.02);
+    border: 1px solid #fff;
+}
+
+.carrosel-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    padding: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.carrosel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.carrosel-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .carrosel-item {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .carrosel-item {
+        flex: 1 1 calc(100% - 10px);
+    }
+}
+
+.up {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: #c0392b;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.up:hover {
+    background-color: #e74c3c;
+}
+
+.up.upscrole {
+    display: flex;
+}
+
+.hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    width: 30px;
+    height: 24px;
+    justify-content: center;
+    position: relative;
+}
+
+.hamburger-btn .line {
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transition: transform 0.3s, opacity 0.3s;
+    position: absolute;
+}
+
+.hamburger-btn .line:nth-child(1) {
+    top: 0;
+}
+
+.hamburger-btn .line:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger-btn .line:nth-child(3) {
+    bottom: 0;
+}
+
+.hamburger-btn.active .line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger-btn.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-btn.active .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 400px;
+    height: 100%;
+    background-color: #1d1d1d;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.mangas-main {
+    padding: 1em;
+}
+
+.title-container {
+    border-left: 0.3em solid #c0392b;
+    padding: 0.6em;
+}
