@@ -212,7 +212,7 @@ header {
     position: fixed;
     top: 0;
     left: -100%;
-    width: 400px;
+    width: 250px;
     height: 100%;
     background-color: #1d1d1d;
     padding: 20px;
@@ -242,3 +242,4 @@ header {
     border-left: 0.3em solid #c0392b;
     padding: 0.6em;
 }
+
