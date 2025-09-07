@@ -10,13 +10,13 @@ body {
 /* Tema Claro */
 body.claro {
 	background-color: #eee;
-	color: #000;
+	color: #111;
 }
 
 /* Tema Escuro */
 body.escuro {
 	background-color: #333;
-	color: #eee;
+	color: #ddd;
 }
 
 /* Container principal */
