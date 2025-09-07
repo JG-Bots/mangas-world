@@ -4,55 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mangás World</title>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet" async>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/body.css">
 </head>
-
 <body>
-    <header>
-        <div class="header" id="header">
-            <h1>Mangás <span>World</span></h1>
-            <div class="hamburger-btn" onclick="toggleMenu()">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </div>
-    </header>
 
-    <nav class="sidebar" id="sidebar">
-        <a href="/">Início</a>
-        <a href="/sobre">Sobre</a>
-        <a href="/contato">Contato</a>
-    </nav>
+<header>
+<div class="header" id="header">
+<h1>Mangás <span>World</span></h1>
+<div class="hamburger-btn" onclick="toggleMenu()">
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+</div>
+</header>
 
-    <div class="main">
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Bem-vindo ao Mangás <span>World</span></h1>
-                <h3>Explore os melhores mangás aqui na nossa plataforma!</h3>
-            </div>
-        </section>
+<nav class="sidebar" id="sidebar">
+<a href="/">Início</a>
+</nav>
 
-        <section class="mangas-main">
-            <div class="title-container">
-                <h1>Top Mangás</h1>
-            </div>
-            <div class="carrosel-container">
-                <div class="carrosel" id="carrosel">
-                    <div class="carrosel-item" style="background-image: url();">
-                        <div class="carrosel-content">
-                            <h2>RESET: Despertar em dois mundos</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<div class="main">
+<section class="hero">
+<div class="hero-content">
+<h1>Bem-vindo ao Mangás <span>World</span></h1>
+<h3>Explore os melhores mangás aqui na nossa plataforma!</h3>
+</div>
+</section>
 
-        <div class="up" id="pgup" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">^</div>
-    </div>
+<section class="mangas-main">
+<div class="title-container">
+<h1>Top Mangás</h1>
+</div>
+<div class="carrosel-container">
+<div class="carrosel" id="carrosel">
+<div class="carrosel-item" style="background-image: url();">
+<div class="carrosel-content">
+<h2>RESET: Despertar em dois mundos</h2>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-    <script>
+<div class="up" id="pgup" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2l-7 7h4v7h6v-7h4l-7-7z"/></svg>
+</div>
+</div>
+
+<script>
         function toggleMenu() {
             document.getElementById("sidebar").classList.toggle("active");
             document.querySelector(".hamburger-btn").classList.toggle("active");
@@ -69,10 +69,6 @@
                 up.classList.remove("upscrole");
             }
         });
-    </script>
+</script>
 </body>
-
 </html>
-
-
-
