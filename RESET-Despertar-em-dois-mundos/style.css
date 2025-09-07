@@ -1,0 +1,112 @@
+/* Fontes e transição */
+body {
+	font-family: 'Teko', sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	padding: 0;
+	transition: background 0.3s, color 0.3s;
+}
+
+/* Tema Claro */
+body.claro {
+	background-color: #f5f5f5;
+	color: #111;
+}
+
+/* Tema Escuro */
+body.escuro {
+	background-color: #121212;
+	color: #eee;
+}
+
+/* Container principal */
+.chapter {
+	max-width: 800px;
+	margin: 2em auto;
+	padding: 1em 2em;
+}
+
+h1, h2 {
+	text-align: center;
+	margin: 0.5em 0;
+}
+
+h2 {
+	font-weight: normal;
+	color: #555;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+/* Navegação */
+.navigation {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	margin: 2em 0;
+	flex-wrap: wrap;
+}
+
+.navigation a {
+	text-decoration: none;
+	padding: 10px 20px;
+	background: #333;
+	color: #fff;
+	border-radius: 6px;
+	transition: background 0.3s;
+}
+
+.navigation a:hover {
+	background: #555;
+}
+
+/* Botão de alternar tema (Headset) */
+#toggleTema {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	border: none;
+	border-radius: 50%;
+	background-color: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background 0.3s;
+}
+
+#toggleTema:hover {
+	background-color: #555;
+}
+
+#toggleTema svg {
+	width: 24px;
+	height: 24px;
+	fill: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+	.chapter {
+		padding: 1em;
+	}
+
+	.navigation a {
+		padding: 8px 12px;
+		font-size: 14px;
+	}
+
+	#toggleTema {
+		width: 35px;
+		height: 35px;
+	}
+
+	#toggleTema svg {
+		width: 20px;
+		height: 20px;
+	}
+}
